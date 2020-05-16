@@ -59,9 +59,13 @@ def set_foreground(window_title):
     subprocess.call(cmd, shell = True)
 
 
-# if this is run from a hotkey, make sure the script containing it ends in .pyw so it doesn't open its own window and steal focus
-def get_focus():
+
+def get_forground():
+    ''' if this is run from a hotkey, make sure the script containing it ends in .pyw so it doesn't open its own window and steal focus '''
     return GetWindowText(GetForegroundWindow())
+
+
+    
 
 
 if __name__ == '__main__':
